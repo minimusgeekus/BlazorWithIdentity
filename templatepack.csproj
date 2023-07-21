@@ -14,7 +14,7 @@
     <Description>Templates to use when creating a blazor hosted application with microsoft's cookie based Identity.</Description>
     <PackageTags>dotnet-new;templates;blazor;blazor-identity;blazor-cookie</PackageTags>
 
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
 
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
@@ -25,7 +25,12 @@
   <ItemGroup>
     <Content Include="template\**\*" Exclude="template\**\bin\**;template\**\obj\**;**\*.db;**\*.pubxml;template\.vs\**;template\**\*.csproj.user;**\PublishProfiles\**;**\*.json.user" />
 	<Compile Remove="**\*" />
-    <None Include="LICENSE.txt" Pack="true" PackagePath="LICENSE.txt"/>
+    <None Include="LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
   </ItemGroup>
 
 </Project>
